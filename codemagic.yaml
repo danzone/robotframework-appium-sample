@@ -6,6 +6,7 @@ workflows:
       - name: Install Appium
         script: |
           npm install --location=global appium
+          appium driver install xcuitest
       - name: Install Robot Framework
         script: pip install robotframework robotframework-appiumlibrary
       - name: Launch emulator

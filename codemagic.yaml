@@ -14,3 +14,4 @@ workflows:
         script: |
           robot --outputDir rf-results tests/ios_basic_interactions.test.robot
           cp  -r rf-results $CM_EXPORT_DIR/rf-results
+          cp *.txt $CM_EXPORT_DIR/

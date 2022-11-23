@@ -3,7 +3,7 @@ Resource  ../resources/resource.robot
 Library     Process
 
 Test Setup  Open iOS Test App
-Test Teardown  Close Application
+Test Teardown  Stop Appium Server
 
 *** Test Cases ***
 Should send keys to inputs

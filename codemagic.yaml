@@ -3,7 +3,7 @@ workflows:
     name: Robot Framework iOS mobile tests
     instance_type: mac_mini_m1
     environment:
-      xcode: 13.4
+      xcode: 14
     scripts:
       - name: Install Appium
         script: |

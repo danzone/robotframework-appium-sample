@@ -9,7 +9,7 @@ workflows:
         script: pip install robotframework robotframework-appiumlibrary
       - name: Launch emulator
         script: |
-          xcrun simctl list
+          open -a Simulator.app
       - name: Test
         script: |
           robot --outputDir rf-results tests/ios_basic_interactions.test.robot

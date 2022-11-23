@@ -18,6 +18,18 @@ ${IOS_DEVICE_NAME}            iPhone 8
 
 
 *** Keywords ***
+
+Start Appium Server
+    [Documentation]     Starts Appium server
+    Start Process  appium  shell=True  alias=appiumserver
+    ...     stdout=${CURDIR}/appium_stdout.txt  stderr=${CURDIR}/appium_stderr.txt
+    Process Should Be Running  appiumserver
+    Sleep  10s
+
+Stop Appium Server
+    [Documentation]     Stops Appium server
+    Terminate Process  appiumserver  kill=True
+
 Open Android Test App
   [Arguments]    ${appActivity}=${EMPTY}
   open application  http://127.0.0.1:4723/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}

@@ -1,5 +1,7 @@
 *** Settings ***
 Resource  ../resources/resource.robot
+Library     Process
+
 Test Setup  Open iOS Test App
 Test Teardown  Close Application
 

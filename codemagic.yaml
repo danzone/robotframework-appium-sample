@@ -6,8 +6,6 @@ workflows:
       - name: Install Appium
         script: |
           npm install --location=global appium
-          cd /Applications/Appium.app/Contents/Resources/app
-          npm install
       - name: Install Robot Framework
         script: pip install robotframework robotframework-appiumlibrary
       - name: Launch emulator

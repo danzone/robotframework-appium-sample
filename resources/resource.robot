@@ -13,7 +13,7 @@ ${ANDROID_APP_PACKAGE}        io.appium.android.apis
 ${IOS_AUTOMATION_NAME}        XCUITest
 ${IOS_APP}                    ${CURDIR}/../demoapp/TestApp.app.zip
 ${IOS_PLATFORM_NAME}          iOS
-${IOS_PLATFORM_VERSION}       %{IOS_PLATFORM_VERSION=16.1}
+${IOS_PLATFORM_VERSION}       %{IOS_PLATFORM_VERSION=14.5}
 ${IOS_DEVICE_NAME}            iPhone 8
 
 

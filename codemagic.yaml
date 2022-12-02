@@ -1,0 +1,21 @@
+workflows:
+  rf-ios-tests:
+    name: Robot Framework iOS mobile tests
+    instance_type: mac_mini_m1
+    environment:
+      xcode: 13.4
+    scripts:
+      - name: Install Appium
+        script: |
+          npm install --location=global appium
+      - name: Install Robot Framework
+        script: pip install robotframework robotframework-appiumlibrary
+      - name: Launch emulator
+        script: |
+          open -a Simulator.app &
+      - name: Test
+        script: |
+          robot --outputDir rf-results tests/ios_basic_interactions.test.robot
+          cp  -r rf-results $CM_EXPORT_DIR/rf-results
+          cp resources/*.txt $CM_EXPORT_DIR/
+          cp resources/*.log $CM_EXPORT_DIR/

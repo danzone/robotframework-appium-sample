@@ -5,7 +5,7 @@ workflows:
     environment:
       xcode: 13.4
     scripts:
-      - name: Install Appium
+      - name: Install Appium Server
         script: |
           npm install --location=global appium
       - name: Install Robot Framework
